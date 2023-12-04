@@ -1,0 +1,14 @@
+/**
+ if active, show description and display "-" icon
+ else, display "+" icon
+**/
+.accordion {
+
+}
+
+.accordion-item {
+
+}
+.accordion-item.active {
+
+}
