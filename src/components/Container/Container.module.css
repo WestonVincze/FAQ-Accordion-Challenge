@@ -1,3 +1,8 @@
 .container {
-
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 0 20px #ccc;
 }

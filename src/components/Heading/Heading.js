@@ -1,4 +1,4 @@
-import starIcon from "/assets/images/icon-star.svg";
+import starIcon from "/src/assets/icon-star.svg";
 import styles from "./Heading.module.css";
 // @ts-check
 

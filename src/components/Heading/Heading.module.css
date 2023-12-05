@@ -1,8 +1,10 @@
 .heading {
+  font-size: 50px;
+  line-height: 50px;
   display: flex;
-  column-gap: 15px;
+  column-gap: var(--spacing-sm);
 }
 
 .heading svg {
-  width: 30px;
+  width: 40px;
 }

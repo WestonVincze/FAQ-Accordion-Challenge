@@ -1,4 +1,5 @@
 import styles from "./Accordion.module.css";
+import { AccordionItem } from "./AccordionItem";
 // @ts-check
 
 /**
@@ -8,11 +9,12 @@ import styles from "./Accordion.module.css";
  */
 export const Accordion = (items) => {
   const root = document.createElement("div");
-  // create root el
-  // add class
+  root.classList.add(styles.accordion);
 
   // loop through items array
-  // renders a list of accordion items
-  // return
+  for (let item in items) {
+    root.append(AccordionItem({ ...item }))
+  }
+
   return root;
 }

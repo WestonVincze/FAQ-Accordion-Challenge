@@ -1,3 +1,4 @@
+import styles from "../Accordion.module.css";
 // @ts-check
 
 /**
@@ -8,6 +9,7 @@
 export const AccordionItem = ({ label, description, startActive = false}) => {
   // create root element
   const root = document.createElement("div");
+  root.classList.add(styles.item);
   // add active state and assign value from "startActive"
   // if active, apply "active" class
 
