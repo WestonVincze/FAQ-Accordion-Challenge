@@ -1,12 +1,9 @@
 // @ts-check
 
 /**
- * 
+ * Renders a single Accordion Item.
  * @param {{ label: string, description: string, startActive: boolean }} AccordionItemProps
- * 
- * @returns {HTMLDivElement}
- * 
- * Renders a single Accordion Item
+ * @returns {HTMLDivElement} The created `AccordionItem` element
  */
 export const AccordionItem = ({ label, description, startActive = false}) => {
   // create root element

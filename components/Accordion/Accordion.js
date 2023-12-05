@@ -1,9 +1,10 @@
+import styles from "./Accordion.module.css";
 // @ts-check
 
 /**
- * @param {[ { label: string, description: string } ]} items 
- * 
- * @return {HTMLDivElement}
+ * Accepts a list of items and creates an `AccordionItem` for each.
+ * @param {{ label: string, description: string }[]} items 
+ * @returns {HTMLDivElement} The created `Accordion` element
  */
 export const Accordion = (items) => {
   const el = document.createElement("div");
