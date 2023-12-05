@@ -7,12 +7,12 @@ import styles from "./Accordion.module.css";
  * @returns {HTMLDivElement} The created `Accordion` element
  */
 export const Accordion = (items) => {
-  const el = document.createElement("div");
+  const root = document.createElement("div");
   // create root el
   // add class
 
   // loop through items array
   // renders a list of accordion items
   // return
-  return el;
+  return root;
 }

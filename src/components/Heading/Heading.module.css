@@ -1,0 +1,8 @@
+.heading {
+  display: flex;
+  column-gap: 15px;
+}
+
+.heading svg {
+  width: 30px;
+}

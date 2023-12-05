@@ -1,5 +1,6 @@
-import { Accordion, Accordion } from "../components/Accordion"
 import { Container } from "../components/Container"
+import { Heading } from "../components/Heading";
+import { Accordion } from "../components/Accordion"
 import { FAQData } from "./FAQData";
 // @ts-check
 
@@ -11,8 +12,10 @@ import { FAQData } from "./FAQData";
  */
 export const FAQs = (root) => {
   const container = Container();
+  const heading = Heading("FAQs");
   const accordion = Accordion(FAQData);
 
+  container.append(heading);
   container.append(accordion);
   root.append(container);
 }

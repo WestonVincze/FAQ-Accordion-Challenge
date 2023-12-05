@@ -1,4 +1,6 @@
 ## DOM Arrangement
+This is the initial brainstorming document. It is the initial and most primitive version of this application's architecture.
+
 #### Root:
 - background image and color
 
