@@ -1,6 +1,6 @@
 import plusIcon from "/src/assets/icon-plus.svg";
 import minusIcon from "/src/assets/icon-minus.svg";
-import styles from "../Accordion.module.css";
+import styles from "./AccordionItem.module.css";
 // @ts-check
 
 /**

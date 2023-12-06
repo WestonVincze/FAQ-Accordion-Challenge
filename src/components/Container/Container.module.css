@@ -1,8 +1,8 @@
 .container {
-  max-width: var(--container-width);
+  max-width: 600px;
   margin: 0 auto;
   background-color: var(--white);
   border-radius: 15px;
   padding: var(--spacing-lg);
-  box-shadow: 0 0 20px #ccc;
+  box-shadow: 0 0 50px var(--purple-shadow); 
 }

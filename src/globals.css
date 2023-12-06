@@ -11,17 +11,18 @@
   /* Colors */
   --white: hsl(0, 0%, 100%);
   --pink: hsl(275, 100%, 97%);
+  --pink-highlight: #AD28EB;
   --purple: hsl(292, 16%, 49%);
+  --purple-shadow: hsla(292, 16%, 49%, 0.3);
   --dark-purple: hsl(292, 42%, 14%);
 
   /* Spacing */
   --spacing-sm: 5px;
-  --spacing-md: 15px;
-  --spacing-lg: 25px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
 
   /* Sizes */
   --font-size: 16px;
-  --container-width: 600px
 }
 
 /** Overrides **/
@@ -29,17 +30,25 @@
   box-sizing: border-box;
 }
 
-body {
-  /* TODO: fix webpack configuration issue */
-  background-image: url('/assets/images/background-pattern-desktop.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+html, body {
+  height: 100svh;
   color: var(--dark-purple);
   font-family: 'WorkSans', sans-serif;
   background-color: var(--pink);
   margin: 0;
   padding: 0;
+}
+body {
+  background-image: url('../assets/images/background-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   padding-top: 10%;
+  /*
+  ** if the desire is to completely center content, we can use flex: **
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
 }
 
 /** Mobile (mockup size) **/

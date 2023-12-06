@@ -1,27 +1,28 @@
-.accordion {
-  
-}
-
 .item {
   padding: var(--spacing-md) 0;
 }
-.item summary:hover {
-  cursor: pointer;
-}
 .item:not(:last-child) {
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid var(--pink);
 }
 .item summary {
+  user-select: none;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.1rem;
+  transition: color 0.2s ease-in-out;
+}
+.item summary:hover {
+  color: var(--pink-highlight);
+  cursor: pointer;
 }
 .item summary > svg {
   min-width: 30px;
   height: 30px;
 }
 .item > p {
+  line-height: 1.5rem;
   margin: 0;
   display: block;
   color: var(--purple);

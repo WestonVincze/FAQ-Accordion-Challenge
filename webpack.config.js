@@ -29,17 +29,6 @@ module.exports = {
         include: path.resolve(__dirname, 'src/assets'), // SVGs in src/assets will be handled by inline-loader (js module)
         use: 'svg-inline-loader',
       },
-      {
-        test: /\.svg$/,
-        exclude: path.resolve(__dirname, 'src/assets'), // SVGs not in src/assets will be handled by file-loader
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'assets/[name].[hash].[ext]',
-            esModule: false,
-          },
-        },
-      },
     ],
   },
   plugins: [
