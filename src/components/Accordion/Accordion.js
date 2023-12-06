@@ -12,7 +12,7 @@ export const Accordion = (items) => {
   root.classList.add(styles.accordion);
 
   // loop through items array
-  for (let item in items) {
+  for (let item of items) {
     root.append(AccordionItem({ ...item }))
   }
 

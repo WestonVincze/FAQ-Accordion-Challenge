@@ -1,14 +1,35 @@
-/**
- if active, show description and display "-" icon
- else, display "+" icon
-**/
 .accordion {
   
 }
 
 .item {
-
+  padding: var(--spacing-md) 0;
 }
-.item.active {
-
+.item summary:hover {
+  cursor: pointer;
+}
+.item:not(:last-child) {
+  border-bottom: 2px solid #eee;
+}
+.item summary {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item summary > svg {
+  min-width: 30px;
+  height: 30px;
+}
+.item > p {
+  margin: 0;
+  display: block;
+  color: var(--purple);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, margin-top 0.2s ease-in-out;
+}
+.item details[open] + p {
+  max-height: 100px;
+  margin-top: var(--spacing-md);
 }

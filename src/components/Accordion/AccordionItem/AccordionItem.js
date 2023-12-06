@@ -1,3 +1,5 @@
+import plusIcon from "/src/assets/icon-plus.svg";
+import minusIcon from "/src/assets/icon-minus.svg";
 import styles from "../Accordion.module.css";
 // @ts-check
 
@@ -6,19 +8,30 @@ import styles from "../Accordion.module.css";
  * @param {{ label: string, description: string, startActive: boolean }} AccordionItemProps
  * @returns {HTMLDivElement} The created `AccordionItem` element
  */
-export const AccordionItem = ({ label, description, startActive = false}) => {
-  // create root element
+export const AccordionItem = ({ label, description }) => {
   const root = document.createElement("div");
+  const details = document.createElement("details");
   root.classList.add(styles.item);
-  // add active state and assign value from "startActive"
-  // if active, apply "active" class
 
-  // create label
-  // append label
+  const icon = document.createElement("svg");
+  icon.innerHTML = plusIcon;
 
-  // create description
-  // append description
+  const summary = document.createElement("summary");
+  summary.innerText = label;
+  summary.append(icon);
 
-  // return root element
+  const content = document.createElement("p");
+  content.innerText = description;
+
+  details.append(summary);
+  root.append(details);
+  root.append(content);
+
+  const updateIcon = () => {
+    icon.innerHTML = details.open ? minusIcon : plusIcon;
+  };
+
+  details.addEventListener('toggle', updateIcon);
+
   return root;
 }
