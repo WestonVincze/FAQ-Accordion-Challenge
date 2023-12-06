@@ -31,6 +31,5 @@
   transition: max-height 0.3s ease-in-out, margin-top 0.2s ease-in-out;
 }
 .item details[open] + p {
-  max-height: 100px;
   margin-top: var(--spacing-md);
 }

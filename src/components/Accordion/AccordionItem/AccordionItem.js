@@ -29,6 +29,8 @@ export const AccordionItem = ({ label, description }) => {
 
   const updateIcon = () => {
     icon.innerHTML = details.open ? minusIcon : plusIcon;
+    // dynamically assign maxHeight (required for CSS animation)
+    content.style.maxHeight = details.open ?`${content.scrollHeight}px` : '0';
   };
 
   details.addEventListener('toggle', updateIcon);

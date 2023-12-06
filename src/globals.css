@@ -31,7 +31,7 @@
 }
 
 html, body {
-  height: 100svh;
+  min-height: 100svh;
   color: var(--dark-purple);
   font-family: 'WorkSans', sans-serif;
   background-color: var(--pink);
@@ -40,9 +40,13 @@ html, body {
 }
 body {
   background-image: url('../assets/images/background-pattern-desktop.svg');
+  background-size: auto 320px;
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  padding-top: 10%;
+  background-position: center;
+  /* eliminates rounding errors which cause a 1px "line" for some screen sizes */
+  background-position-y: -1px;
+  padding: var(--spacing-md);
+  padding-top: 18svh;
   /*
   ** if the desire is to completely center content, we can use flex: **
   display: flex;
@@ -51,7 +55,16 @@ body {
   */
 }
 
+@media screen and (min-width: 1440px) {
+  body {
+    background-size: 100% auto;
+  }
+}
+
 /** Mobile (mockup size) **/
 @media screen and (max-width: 375px) {
-  
+  body {
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+    background-size: auto 232px;
+  }
 }
