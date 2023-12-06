@@ -1,12 +1,10 @@
 .heading {
-  font-size: 50px;
-  line-height: 50px;
   display: flex;
   align-items: center;
   column-gap: var(--spacing-md);
 }
 
 .heading svg {
-  min-width: 40px;
-  height: 40px;
+  min-width: var(--h1-svg-size);
+  height: var(--h1-svg-size);
 }

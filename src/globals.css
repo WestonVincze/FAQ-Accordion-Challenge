@@ -23,11 +23,18 @@
 
   /* Sizes */
   --font-size: 16px;
+  --h1-svg-size: 40px;
 }
 
 /** Overrides **/
 *, *::after, *::before {
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: var(--spacing-md) 0;
 }
 
 html, body {
@@ -56,6 +63,14 @@ body {
 }
 
 @media screen and (max-width: 375px) {
+  :root {
+    --spacing-md: 15px;
+    --h1-svg-size: 25px;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
   body {
     background-image: url('../assets/images/background-pattern-mobile.svg');
     background-size: auto 232px;

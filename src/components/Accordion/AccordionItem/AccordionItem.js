@@ -42,6 +42,7 @@ export const AccordionItem = ({ label, description }) => {
   updateIcons();
 
   details.addEventListener('toggle', updateIcons);
+  window.addEventListener('resize', updateIcons);
 
   return root;
 }
