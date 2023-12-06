@@ -5,25 +5,31 @@
   border-bottom: 2px solid var(--pink);
 }
 .item summary {
-  position: relative;
   font-size: 1.1rem;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: var(--spacing-sm);
   user-select: none;
   transition: color 0.2s ease-in-out;
 }
-.item summary:hover {
+.item summary:hover, .item summary:focus {
   color: var(--pink-highlight);
   cursor: pointer;
+  outline: none;
+}
+.item summary > icon {
+  position: relative;
+  height: 30px;
+  min-width: 30px;
 }
 .item summary svg {
   position: absolute;
   top: 0;
   right: 0;
-  min-width: 30px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
   transition: opacity 0.3s ease-in-out;
 }
 .item > p {
