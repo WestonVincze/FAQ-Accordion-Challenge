@@ -13,27 +13,35 @@ export const AccordionItem = ({ label, description }) => {
   const details = document.createElement("details");
   root.classList.add(styles.item);
 
-  const icon = document.createElement("svg");
-  icon.innerHTML = plusIcon;
+  const icon = document.createElement("div");
+  icon.innerHTML = plusIcon + minusIcon;
 
   const summary = document.createElement("summary");
-  summary.innerText = label;
+  summary.textContent = label;
   summary.append(icon);
 
   const content = document.createElement("p");
-  content.innerText = description;
+  content.textContent = description;
 
   details.append(summary);
   root.append(details);
   root.append(content);
 
-  const updateIcon = () => {
-    icon.innerHTML = details.open ? minusIcon : plusIcon;
-    // dynamically assign maxHeight (required for CSS animation)
-    content.style.maxHeight = details.open ?`${content.scrollHeight}px` : '0';
+  const updateIcons = () => {
+    const isOpen = details.open;
+    const [plus, minus] = icon.childNodes;
+
+    // show/hide plus and minus icons
+    plus.style.opacity = isOpen ? 0 : 1;
+    minus.style.opacity = isOpen ? 1 : 0;
+
+    // dynamically assign maxHeight for CSS animation
+    content.style.maxHeight = isOpen ? `${content.scrollHeight}px` : 0;
   };
 
-  details.addEventListener('toggle', updateIcon);
+  updateIcons();
+
+  details.addEventListener('toggle', updateIcons);
 
   return root;
 }

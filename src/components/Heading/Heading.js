@@ -10,7 +10,6 @@ export const Heading = (text) => {
   const root = document.createElement("h1");
   root.classList.add(styles.heading);
 
-  // render the svg
   const temp = document.createElement("span");
   temp.innerHTML = starIcon;
   const svgStar = temp.firstChild;

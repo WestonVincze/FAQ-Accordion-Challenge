@@ -5,29 +5,34 @@
   border-bottom: 2px solid var(--pink);
 }
 .item summary {
-  user-select: none;
+  position: relative;
+  font-size: 1.1rem;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.1rem;
+  user-select: none;
   transition: color 0.2s ease-in-out;
 }
 .item summary:hover {
   color: var(--pink-highlight);
   cursor: pointer;
 }
-.item summary > svg {
+.item summary svg {
+  position: absolute;
+  top: 0;
+  right: 0;
   min-width: 30px;
   height: 30px;
+  transition: opacity 0.3s ease-in-out;
 }
 .item > p {
-  line-height: 1.5rem;
-  margin: 0;
-  display: block;
-  color: var(--purple);
   max-height: 0;
+  margin: 0;
+  line-height: 1.5rem;
+  display: block;
   overflow: hidden;
+  color: var(--purple);
   transition: max-height 0.3s ease-in-out, margin-top 0.2s ease-in-out;
 }
 .item details[open] + p {
