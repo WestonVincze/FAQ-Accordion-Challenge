@@ -19,7 +19,7 @@
   cursor: pointer;
   outline: none;
 }
-.item summary > icon {
+.item summary > span {
   position: relative;
   height: 30px;
   min-width: 30px;

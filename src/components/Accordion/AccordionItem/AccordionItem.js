@@ -15,7 +15,7 @@ export const AccordionItem = ({ label, description, startOpen }) => {
   const details = document.createElement("details");
   if (startOpen) details.setAttribute("open", true);
 
-  const icon = document.createElement("icon");
+  const icon = document.createElement("span");
   icon.innerHTML = plusIcon + minusIcon;
 
   const summary = document.createElement("summary");
