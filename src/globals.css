@@ -16,6 +16,9 @@
   --purple-shadow: hsla(292, 16%, 49%, 0.3);
   --dark-purple: hsl(292, 42%, 14%);
 
+  --link: hsl(260, 100%, 20%);
+  --link-visited: hsl(260, 80%, 30%);
+
   /* Spacing */
   --spacing-sm: 5px;
   --spacing-md: 20px;
@@ -37,6 +40,33 @@ h1 {
   margin: var(--spacing-md) 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--link);
+  position: relative;
+  overflow: hidden;
+}
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--link);
+  transition: all 0.3s;
+  transform: translateX(-50%);
+}
+a:hover::after {
+  width: 100%;
+}
+a:visited {
+  color: var(--link-visited);
+}
+a:visited::after {
+  background-color: var(--link-visited);
+}
+
 html, body {
   min-height: 100svh;
   margin: 0;
@@ -46,6 +76,9 @@ html, body {
   background-color: var(--pink);
 }
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: var(--spacing-md);
   padding-top: 18svh;
   background-image: url('../assets/images/background-pattern-desktop.svg');
@@ -54,6 +87,12 @@ body {
   background-position: center;
   /* eliminates rounding errors which cause a 1px "line" for some screen sizes */
   background-position-y: -1px;
+}
+
+footer {
+  width: 100%;
+  margin-top: var(--spacing-md);
+  text-align: center;
 }
 
 @media screen and (min-width: 1440px) {
