@@ -13,7 +13,7 @@ export const AccordionItem = ({ label, description, startOpen }) => {
   root.classList.add(styles.item);
 
   const details = document.createElement("details");
-  if (startOpen) details.setAttribute("open", true);
+  if (startOpen) details.setAttribute("open", "");
 
   const icon = document.createElement("span");
   icon.innerHTML = plusIcon + minusIcon;
