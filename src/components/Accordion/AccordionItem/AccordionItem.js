@@ -5,13 +5,15 @@ import styles from "./AccordionItem.module.css";
 
 /**
  * Renders a single Accordion Item.
- * @param {{ label: string, description: string, startActive: boolean }} AccordionItemProps
+ * @param {{ label: string, description: string, startOpen: boolean }} AccordionItemProps
  * @returns {HTMLDivElement} The created `AccordionItem` element
  */
-export const AccordionItem = ({ label, description }) => {
+export const AccordionItem = ({ label, description, startOpen }) => {
   const root = document.createElement("div");
-  const details = document.createElement("details");
   root.classList.add(styles.item);
+
+  const details = document.createElement("details");
+  if (startOpen) details.setAttribute("open", true);
 
   const icon = document.createElement("icon");
   icon.innerHTML = plusIcon + minusIcon;
@@ -37,6 +39,10 @@ export const AccordionItem = ({ label, description }) => {
 
     // dynamically assign maxHeight for CSS animation
     content.style.maxHeight = isOpen ? `${content.scrollHeight}px` : 0;
+
+    plus.setAttribute('aria-hidden', isOpen);
+    minus.setAttribute('aria-hidden', !isOpen);
+    content.setAttribute('aria-hidden', !isOpen);
   };
 
   updateIcons();

@@ -10,8 +10,9 @@ export const Accordion = (items) => {
   const root = document.createElement("div");
 
   // loop through items array
-  for (let item of items) {
-    root.append(AccordionItem({ ...item }))
+  for (let i = 0; i < items.length; i++) {
+    const startOpen = i === 0;
+    root.append(AccordionItem({ ...items[i], startOpen }))
   }
 
   return root;
