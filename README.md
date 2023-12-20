@@ -18,7 +18,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 #### Instructions
 
-Create an Accordion FAQ page based on the provided mockups. Assets are provided and (style_guide.md)[./style-guide.md] contains color schemes and font sizes.
+Create an Accordion FAQ page based on the provided mockups. Assets are provided and [style_guide.md](./style-guide.md) contains color schemes and font sizes.
 
 #### Requirements
 
